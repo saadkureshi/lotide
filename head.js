@@ -7,13 +7,13 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const head = function(array){
+const head = function(array) {
   if (Array.isArray(array))
-  return array[0];
+    return array[0];
   else {
-    return "Argument passed was not an array."
+    return "Argument passed was not an array.";
   }
-}
+};
 
 assertEqual("Lighthouse Labs", "Bootcamp");
 assertEqual(1, 1);
