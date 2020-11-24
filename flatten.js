@@ -22,11 +22,11 @@ const assertArraysEqual = function(arr1, arr2) {
 console.log(assertArraysEqual([1, 2, 3], [1, 2, 3]));
 console.log(assertArraysEqual([1, 2, 3], [1, 2, "3"]));
 
-const flatten = function (masterArray){
+const flatten = function(masterArray) {
   let flatArray = [];
-  for (let i = 0; i < masterArray.length; i++){
-    if (Array.isArray(masterArray[i])){
-      for (let j = 0; j < masterArray[i].length; j++){
+  for (let i = 0; i < masterArray.length; i++) {
+    if (Array.isArray(masterArray[i])) {
+      for (let j = 0; j < masterArray[i].length; j++) {
         flatArray.push(masterArray[i][j]);
       }
     } else {
