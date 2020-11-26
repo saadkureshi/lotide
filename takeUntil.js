@@ -1,16 +1,23 @@
-const words = ["ground", "control", "to", "major", "tom"];
-const mixbag = ["1", "3", "hello", 22];
-
-const map = function(array, callback) {
-  const results = [];
+const takeUntil = function(array, callback) {
+  let answer = [];
   for (let item of array) {
-    results.push(callback(item));
+    if (callback(item)) {
+      break;
+    }
+    answer.push(item);
   }
-  return results;
+  return answer;
 };
 
-const results1 = map(words, word => word[0]);
+const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
+const results1 = takeUntil(data1, x => x < 0);
 console.log(results1);
+
+console.log('---');
+
+const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
+const results2 = takeUntil(data2, x => x === ',');
+console.log(results2);
 
 const eqArrays = function(arr1, arr2) {
   if (arr1.length === arr2.length) {
@@ -33,5 +40,5 @@ const assertArraysEqual = function(arr1, arr2) {
   }
 };
 
-console.log(assertArraysEqual(map(words, word => word[0]), ["g", "c", "t", "m", "t"]));
-console.log(assertArraysEqual(map(mixbag, each => each[0]), ["1", "3", "h", undefined]));
+assertArraysEqual(results1, [1, 2, 5, 7, 2]);
+assertArraysEqual(results2, [ 'I\'ve', 'been', 'to', 'Hollywood' ]);

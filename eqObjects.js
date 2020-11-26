@@ -32,16 +32,16 @@ const eqObjects = function(object1, object2) {
   }
 
   for (let obj1Key in object1) {
-    if (!object2[obj1Key]) { 
+    if (!object2[obj1Key]) {
       return false;
-    } else if (Array.isArray(object1[obj1Key])) { 
-      if (!(Array.isArray(object2[obj1Key]))) { 
+    } else if (Array.isArray(object1[obj1Key])) {
+      if (!(Array.isArray(object2[obj1Key]))) {
         return false;
       } else if (!(eqArrays(object1[obj1Key], object2[obj1Key]))) {
         return false;
       }
-    } else if (typeof object1[obj1Key] === "object" && !Array.isArray(object1[obj1Key])){
-      if (!(typeof object2[obj1Key] === "object" && !Array.isArray(object1[obj1Key]))) { 
+    } else if (typeof object1[obj1Key] === "object" && !Array.isArray(object1[obj1Key])) {
+      if (!(typeof object2[obj1Key] === "object" && !Array.isArray(object1[obj1Key]))) {
         return false;
       } else if (!(eqObjects(object1[obj1Key], object2[obj1Key]))) {
         return false;
