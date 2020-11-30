@@ -1,7 +1,14 @@
-const assertEqual = require('../assertEqual.js');
+// const assertEqual = require('../assertEqual.js');
+// const assert = require('chai').assert;
 
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
-assertEqual("hello", "Hello");
-assertEqual("23", 23);
-assertEqual(22, 22);
+// describe("#eqArrays", () => {
+
+//   it("returns true for '23' and '23'", () => {
+//     assert.isTrue(assertEqual(23, 23));
+//   });
+
+//   it("returns false for 23 and '23'", () => {
+//     assert.isFalse(assertEqual(23, "23"));
+//   });
+
+// });
