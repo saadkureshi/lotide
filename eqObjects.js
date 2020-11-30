@@ -80,3 +80,6 @@ const xx = { d: {city: "MTL", name: "Saad"}, c: "1" };
 const yy = { d: {city: "London", name: "Saad"}, c: "1" };
 assertEqual(eqObjects(zz, xx), true);
 assertEqual(eqObjects(zz, yy), false);
+
+module.exports = eqObjects;
+

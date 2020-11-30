@@ -47,3 +47,5 @@ const yy = { d: {city: "London", name: "Saad"}, c: "1" };
 assertObjectsEqual(ab, ba);
 assertObjectsEqual(zz, xx);
 assertObjectsEqual(zz, yy);
+
+module.exports = assertObjectsEqual;

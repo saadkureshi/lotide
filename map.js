@@ -35,3 +35,5 @@ const assertArraysEqual = function(arr1, arr2) {
 
 console.log(assertArraysEqual(map(words, word => word[0]), ["g", "c", "t", "m", "t"]));
 console.log(assertArraysEqual(map(mixbag, each => each[0]), ["1", "3", "h", undefined]));
+
+module.exports = map;

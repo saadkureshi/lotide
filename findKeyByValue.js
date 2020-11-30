@@ -33,3 +33,5 @@ assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
 
 assertEqual(findKeyByValue(bestCityByBias, "Montreal"), "fun");
 assertEqual(findKeyByValue(bestCityByBias, "London"), "livability");
+
+module.exports = findKeyByValue;
